@@ -14,8 +14,13 @@ import  time
 
 
 def main():
-    print_sequence1()
-    draw_circles1()
+    #print_sequence1()
+    #draw_circles1()
+    #print_sequence2()
+    #draw_circles2()
+    #print_sequence3()
+    #draw_circles3()
+    print_cosines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -92,7 +97,7 @@ def print_sequence2():
       390.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # Done: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -100,8 +105,10 @@ def print_sequence2():
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
-    ps2 = 50
-    for k in range(18)
+    ps2 = 0
+    for k in range(18):
+        print(ps2 + 50)
+        ps2 = ps2 + 20
 
 
 def draw_circles2():
@@ -115,7 +122,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # Done: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -124,6 +131,18 @@ def draw_circles2():
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
 
+    window = rg.RoseWindow(400, 400)
+    xpoint = 50
+    radii2 = 10
+    for k in range(18):
+        center_point2 = rg.Point(xpoint, 100)
+        c2 = rg.Circle(center_point2, radii2)
+        c2.fill_color = 'blue'
+        c2.attach_to(window)
+        xpoint = xpoint + 20
+        window.render()
+        time.sleep(.1)
+    window.close_on_mouse_click()
 
 def print_sequence3():
     """
@@ -136,7 +155,7 @@ def print_sequence3():
       100.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # Done: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -144,6 +163,10 @@ def print_sequence3():
     print('--------------------------------------------------')
     print('Running print_sequence3:')
     print('--------------------------------------------------')
+    a = 1
+    for k in range(100):
+        print(a)
+        a = a + 1
 
 
 def draw_circles3():
@@ -155,7 +178,7 @@ def draw_circles3():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function, per its doc-string above.
+    # Done: 7. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -163,6 +186,16 @@ def draw_circles3():
     print('--------------------------------------------------')
     print('Running draw_circles3:  See graphics window')
     print('--------------------------------------------------')
+    window = rg.RoseWindow(300, 300)
+    center = rg.Point(200, 150)
+    r = 1
+    for k in range(100):
+        c3 = rg.Circle(center, r)
+        c3.attach_to(window)
+        r = r + 1
+        window.render()
+        time.sleep(.1)
+    window.close_on_mouse_click()
 
 
 def print_cosines():
