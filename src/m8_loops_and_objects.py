@@ -53,7 +53,6 @@ def print_sequence1():
         ps = ps + 10
 
 
-
 def draw_circles1():
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
@@ -85,9 +84,7 @@ def draw_circles1():
     window.close_on_mouse_click()
 
 
-
 def print_sequence2():
-
     """
     Prints:
       50
@@ -145,6 +142,7 @@ def draw_circles2():
         window.render()
         time.sleep(.1)
     window.close_on_mouse_click()
+
 
 def print_sequence3():
     """
