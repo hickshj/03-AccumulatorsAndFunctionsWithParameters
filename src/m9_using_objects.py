@@ -80,7 +80,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # Done: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -95,8 +95,36 @@ def circle_and_rectangle():
     y1 = 100
     x2 = 300
     y2 = 300
+    x3 = 400
+    y3 = 500
     p1 = rg.Point(x1, y1)
+    p2 = rg.Point(x2, y2)
+    p3 = rg.Point(x3, y3)
     col1 = 'blue'
+    c1 = rg.Circle(p1, 50)
+    c1.fill_color = col1
+    c1.outline_thickness = thick1
+    c1.attach_to(window)
+    print(thick1)
+    print(col1)
+    print(p1)
+    print(x1)
+    print(y2)
+    rect = rg.Rectangle(p2, p3)
+    rect.attach_to(window)
+    center2 = rect.get_center()
+    x4 = center2.x
+    y4 = center2.y
+    rect.outline_thickness = thick2
+    color2 = 'None'
+    window.render()
+    print(thick2)
+    print(color2)
+    print(center2)
+    print(x4)
+    print(y4)
+    window.close_on_mouse_click()
+
 
 
 
